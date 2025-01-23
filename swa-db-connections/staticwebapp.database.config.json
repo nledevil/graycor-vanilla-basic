@@ -20,7 +20,9 @@
     },
     "host": {
       "cors": {
-        "origins": ["*"],
+        "origins": [
+          "*"
+        ],
         "allow-credentials": false
       },
       "authentication": {
@@ -54,7 +56,25 @@
             }
           ]
         }
-      ]
+      ],
+      "relationships": {
+        "notes": {
+          "cardinality": "many",
+          "target.entity": "AssetNotes",
+          "source.fields": [],
+          "target.fields": [],
+          "linking.source.fields": [],
+          "linking.target.fields": []
+        },
+        "licenses": {
+          "cardinality": "many",
+          "target.entity": "AssetLicenses",
+          "source.fields": [],
+          "target.fields": [],
+          "linking.source.fields": [],
+          "linking.target.fields": []
+        }
+      }
     },
     "AssetLicenses": {
       "source": {
@@ -132,7 +152,17 @@
             }
           ]
         }
-      ]
+      ],
+      "relationships": {
+        "amounts": {
+          "cardinality": "many",
+          "target.entity": "ContractAmounts",
+          "source.fields": [],
+          "target.fields": [],
+          "linking.source.fields": [],
+          "linking.target.fields": []
+        }
+      }
     },
     "ContractAmounts": {
       "source": {
@@ -184,7 +214,17 @@
             }
           ]
         }
-      ]
+      ],
+      "relationships": {
+        "notes": {
+          "cardinality": "many",
+          "target.entity": "QuoteNotes",
+          "source.fields": [],
+          "target.fields": [],
+          "linking.source.fields": [],
+          "linking.target.fields": []
+        }
+      }
     },
     "QuoteNotes": {
       "source": {
@@ -236,7 +276,17 @@
             }
           ]
         }
-      ]
+      ],
+      "relationships": {
+        "notes": {
+          "cardinality": "many",
+          "target.entity": "VendorNotes",
+          "source.fields": [],
+          "target.fields": [],
+          "linking.source.fields": [],
+          "linking.target.fields": []
+        }
+      }
     },
     "VendorNotes": {
       "source": {
